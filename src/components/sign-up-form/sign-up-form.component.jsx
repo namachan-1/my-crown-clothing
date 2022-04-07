@@ -35,7 +35,7 @@ const SignUpForm = () => {
             const {user} =  await createAuthUserWithEmailAndPassword(email, password);
 
             // create a user document
-            const userDocRef = await createUserDocumentFromAuth(user, {displayName});
+            await createUserDocumentFromAuth(user, {displayName});
 
             // reset form fields to default
             resetFormFields();
